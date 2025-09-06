@@ -3,16 +3,6 @@
     src: url("assets/fonts/DM_Sans/static/DMSans-Bold.ttf") format("truetype");
 }
 
-@font-face {
-    font-family: "DMSans-Regular";              /* name you assign */
-    src: url("assets/fonts/DM_Sans/static/DMSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "DMSans-SemiBold";              /* name you assign */
-    src: url("assets/fonts/DM_Sans/static/DMSans-SemiBold.ttf") format("truetype");
-}
-
 .dark {
     background-image: url("assets/images/bg-dark-theme.png");
     color: #f5f5f5;

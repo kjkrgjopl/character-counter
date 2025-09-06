@@ -3,33 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <title>Frontend Mentor | Character counter</title>
 </head>
-<body>
+<body class="dark">
 
-  Analyze your text in real-time.
+  <div class="row">
+    <img id="logo" src="assets/images/logo-dark-theme.svg" alt="logo">
+    <button id="theme-btn" style="background-color: grey;">
+      <img id="theme-icon" src="assets/images/icon-sun.svg" alt="Theme Icon">
+    </button>
+  </div>
 
-  Start typing here… (or paste your text)
+  <div style="font-size: xx-large; text-align: center;">Analyze your text <br> in real-time.</div>
+  
+  <div>
+    <textarea class="text-area" id="text-pad" placeholder="Start typing here… (or paste your text)"></textarea>
+    <div class="checkbox-row">
+      <div class="checkboxes">
+        <label>
+          <input type="checkbox" id="ex-space"> Exclude Spaces
+        </label>
+        <label>
+          <input type="checkbox" id="char-limit"> Set Character Limit
+        </label>
+      </div>
+      <span id="read-time">Approx. reading time: <!-- Insert number --> minutes</span>
+    </div>
+  </div>
+ 
 
-  Exclude Spaces
-  Set Character Limit
+  <div class="cards">
+    <div class="card purple">
+      <h2 id="count-chars">0</h2>
+      <p>Total Characters</p>
+    </div>
+    <div class="card orange">
+      <h2 id="count-words">0</h2>
+      <p>Word Count</p>
+    </div>
+    <div class="card red">
+      <h2 id="count-sentences">0</h2>
+      <p>Sentence Count</p>
+    </div>
+  </div>
 
-  Approx. reading time: <!-- Insert number --> minutes
+  <div style="font-size: xx-large; width: 60%; text-align: left; margin: auto; ">Letter Density</div>
+  <canvas id="chart" style="width: 60%; margin: auto;"></canvas>
 
-  <!-- Insert number -->
-  Total Characters
-
-  <!-- Insert number -->
-  Word Count
-
-  <!-- Insert number -->
-  Sentence Count
-
-  Letter Density
-  No characters found. Start typing to see letter density.
-
+  <script src="script.js"></script>
 </body>
 </html>

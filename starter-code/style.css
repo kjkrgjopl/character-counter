@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "DMSans-Bold";              /* name you assign */
+    src: url("assets/fonts/DM_Sans/static/DMSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-Regular";              /* name you assign */
+    src: url("assets/fonts/DM_Sans/static/DMSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-SemiBold";              /* name you assign */
+    src: url("assets/fonts/DM_Sans/static/DMSans-SemiBold.ttf") format("truetype");
+}
+
+.dark {
+    background-image: url("assets/images/bg-dark-theme.png");
+    color: #f5f5f5;
+}
+
+.light {
+    background-image: url("assets/images/bg-light-theme.png");
+    color: #222222;
+    
+}
+
+body {
+    font-family: "DMSans-Bold", sans-serif;
+    max-width: 1200px;
+    background-size: cover;     /* make it cover the whole page */
+    background-position: center;/* center the image */
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1200px) {
+    body {
+        max-width: 90%;
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.text-area {
+    display: block;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    width: 60%; 
+    margin: auto;
+    height: 200px;
+}
+
+.checkbox-row {
+    display: flex;
+    justify-content: space-between; /* left and right separation */
+    align-items: center;
+    font-size: small;
+    width: 60%; 
+    margin: auto;
+}
+
+.checkboxes {
+    display: flex;
+    gap: 15px; /* space between checkboxes */
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+    margin: 20px auto;
+}
+  
+.card {
+    flex: 1;
+    min-width: 180px;
+    padding: 20px;
+    border-radius: 12px;
+    color: #000;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;  /* ensures background image stays inside */
+}
+  
+.card h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+  
+.card p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+  
+  /* Background colors + right-side image overlay */
+.purple {
+    background-color: #c7a0ff;
+    background-image: url("assets/images/pattern-character-count.svg"); /* your right-side image */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 100px;
+}
+  
+.orange {
+    background-color: #ffa726;
+    background-image: url("assets/images/pattern-word-count.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 100px;
+}
+  
+.red {
+    background-color: #ff7043;
+    background-image: url("assets/images/pattern-sentence-count.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 100px;
+}
